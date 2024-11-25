@@ -49,7 +49,7 @@ function register() {
                 <p className="px-5">Continue with Google</p>
               </div>
               <div className="w-full h-auto border-0 px-5 my-4 border-sky-500 flex justify-center text-gray-700">
-                <p>Already have an account - <b className='cursor-pointer'>Sign In</b></p>
+                <p>Already have an account? - <b className='cursor-pointer'>Sign In</b></p>
               </div>
             </div>
           </div>

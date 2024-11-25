@@ -32,7 +32,7 @@ function Login() {
                 <input type="password" className="w-4/5 p-2 shadow-md outline-0 font-mono text-lg rounded-sm"/>
               </div>
               <div className="w-full h-auto border-0 px-20 border-sky-500 flex justify-end text-gray-700">
-                <p className="cursor-pointer">Forget password</p>
+                <p className="cursor-pointer">Forget password?</p>
               </div>
               <div className="w-full h-auto border-0 px-5 my-5  border-sky-500 flex justify-start ">
                 <button className="w-4/5 p-2 shadow-md outline-0 font-mono text-lg rounded-sm bg-[#ff4646] text-white">Submit</button>
@@ -45,7 +45,7 @@ function Login() {
                 <p className="px-5">Continue with Google</p>
               </div>
               <div className="w-full h-auto border-0 px-5 my-4 border-sky-500 flex justify-center text-gray-700">
-                <p>don't have account - <b className="cursor-pointer">Sign Up</b></p>
+                <p>Don't have an account? - <b className="cursor-pointer">Sign Up</b></p>
               </div>
             </div>
           </div>
