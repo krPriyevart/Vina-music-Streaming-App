@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 const Playlist = new mongoose.Schema({
 name: {
     type: String,
@@ -27,4 +27,4 @@ collaborators: [
 });
 
 const playlistModel = mongoose.model("playlist", Playlist);
-module.exports = playlistModel;
+export default playlistModel;

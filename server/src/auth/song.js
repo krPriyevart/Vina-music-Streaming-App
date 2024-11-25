@@ -27,8 +27,8 @@ router.get("/mysongs", passport.authenticate("jwt", {session: false}),
                 .json({data: songs});
     }
 );
-router.get("/artist", passport.authenticate("jwt",{session:false}), async(req,res) =>{
-    const {artistId} = req.body;
+router.get("/get/artist/:artistId", passport.authenticate("jwt",{session:false}), async(req,res) =>{
+    const {artistId} = req.params;
     const artist = await User.find({_id: artistId});
     if(!artist){
         return res.status(301).json({err:"artist does not exist"});
@@ -36,8 +36,8 @@ router.get("/artist", passport.authenticate("jwt",{session:false}), async(req,re
     const songs = await Song.find({artist:artistId});
     return res.status(200).json({data: songs});
 });
-router.get("/songname", passport.authenticate("jwt",{session:false}), async(req,res) =>{
-    const {songName} = req.body;
+router.get("/get/songname/:songName", passport.authenticate("jwt",{session:false}), async(req,res) =>{
+    const {songName} = req.params;
     const songs = await Song.find({name:songName});
     return res.status(200).json({data:songs});
 })

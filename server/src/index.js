@@ -4,6 +4,7 @@ import mongoose from "mongoose";
 import connectDB from "./db/index.js";
 import authRoutes from "./auth/auth.js";
 import songRoutes from "./auth/song.js";
+import playlistRoutes from "./auth/playlist.js";
 import passport from 'passport';
 import './passportConfig.js';
 
@@ -35,3 +36,4 @@ connectDB()
 })
 app.use("/auth", authRoutes);
 app.use("/song", songRoutes);
+app.use("/playlist", playlistRoutes);
