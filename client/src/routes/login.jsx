@@ -40,7 +40,7 @@ function Login() {
               <div className="w-full h-auto border-0 px-5 my-4 border-sky-500 flex justify-center text-gray-700">
                 <p>Or Sign in with</p>
               </div>
-              <div className="w-3/4 mx-12 h-auto border-0 px-5 cursor-pointer bg-white py-2 rounded-3xl border-sky-500 flex justify-center text-gray-700">
+              <div className="w-3/4 mx-12 h-auto border-0 px-5 cursor-pointer shadow bg-white py-2 rounded-3xl border-sky-500 flex justify-center text-gray-700">
                 <img src={GoogleLogo} className="w-5 h-5 " />{" "}
                 <p className="px-5">Continue with Google</p>
               </div>
