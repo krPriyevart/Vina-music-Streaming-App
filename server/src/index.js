@@ -1,6 +1,7 @@
 import dotenv from "dotenv";
 import express from "express";
 import mongoose from "mongoose";
+import cors from "cors";
 import connectDB from "./db/index.js";
 import authRoutes from "./auth/auth.js";
 import songRoutes from "./auth/song.js";
@@ -14,6 +15,22 @@ app.use(passport.initialize());
 dotenv.config({
     path:'./env'
 })
+
+const allowedOrigins = [
+    'http://127.0.0.1:5500', 
+    'https://social-app-frontend-tan.vercel.app', 
+];
+
+app.use(cors({
+    origin: (origin, callback) => {
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+        } else {
+            callback(new Error('Not allowed by CORS'));
+        }
+    },
+    credentials: true,
+}));
 
 // Database connection
 // mongoose.connect(`${process.env.URI}`, {

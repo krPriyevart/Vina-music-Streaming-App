@@ -31,6 +31,18 @@ router.post("/register", async(req, res) => {
     delete userToReturn.password;
     return res.status(200).json(userToReturn);
 });
+router.post("/apple", async(req, res) => {
+    const {ph, potassium, phosphorus, nitrogen, temperature, rainfall} = req.body;
+    console.log(req.body);
+
+    let locations = [
+        {"name": "Location 1", "lat": 26.9715987, "lng": 88.594566},
+        {"name": "Location 2", "lat": 23.704060, "lng": 87.102493},
+        {"name": "Location 3", "lat": 22.076090, "lng": 87.577426}
+    ]
+   
+    return res.status(200).json({locations, cul:false});
+});
 
 router.post("/login", async(req,res)=>{
     const {email,password} = req.body;
